@@ -15,7 +15,7 @@ void BioEnemyShip::Update(const GameTime& gameTime)
 {
 	if (IsActive())
 	{
-		float x = sin(gameTime.GetTotalTime() * Math::PI + GetIndex());
+		float x = 1.5*cos(gameTime.GetTotalTime() * Math::PI + GetIndex()); //enemy wave movement pattern
 		x *= GetSpeed() * gameTime.GetElapsedTime() * 1.4f;
 		TranslatePosition(x, GetSpeed() * gameTime.GetElapsedTime());
 
